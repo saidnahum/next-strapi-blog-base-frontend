@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { gql, useQuery } from '@apollo/client';
-import { PossibleTypeExtensionsRule } from 'graphql';
 
 const query = gql `
 {
@@ -25,9 +24,6 @@ const query = gql `
 export default function Home() {
 
   const {data, error, loading} = useQuery(query);
-  console.log(data);
-  console.log(loading);
-  
 
   return (
     <div className=''>
